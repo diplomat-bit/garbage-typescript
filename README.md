@@ -1,6 +1,6 @@
 # Garbage TypeScript API Library
 
-[![NPM version](<https://img.shields.io/npm/v/garbage.svg?label=npm%20(stable)>)](https://npmjs.org/package/garbage) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/garbage)
+
 
 This library provides convenient access to the Garbage REST API from server-side TypeScript or JavaScript.
 
