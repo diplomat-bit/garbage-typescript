@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource portfolios', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.investments.portfolios.create({ name: 'string', strategy: 'GROWTH' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource portfolios', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.investments.portfolios.create({
       name: 'string',
@@ -29,7 +29,7 @@ describe('resource portfolios', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.investments.portfolios.retrieve('string');
     const rawResponse = await responsePromise.asResponse();
@@ -41,7 +41,7 @@ describe('resource portfolios', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.investments.portfolios.update('string');
     const rawResponse = await responsePromise.asResponse();
@@ -53,7 +53,7 @@ describe('resource portfolios', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -65,7 +65,7 @@ describe('resource portfolios', () => {
     ).rejects.toThrow(Garbage.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.investments.portfolios.list();
     const rawResponse = await responsePromise.asResponse();
@@ -77,7 +77,7 @@ describe('resource portfolios', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -85,7 +85,7 @@ describe('resource portfolios', () => {
     ).rejects.toThrow(Garbage.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('rebalance', async () => {
     const responsePromise = client.investments.portfolios.rebalance('string');
     const rawResponse = await responsePromise.asResponse();
@@ -97,7 +97,7 @@ describe('resource portfolios', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('rebalance: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

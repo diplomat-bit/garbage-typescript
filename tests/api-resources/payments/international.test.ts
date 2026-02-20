@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource international', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeSepa: only required params', async () => {
     const responsePromise = client.payments.international.executeSepa({
       amount: 4090.998569865607,
@@ -23,7 +23,7 @@ describe('resource international', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeSepa: required and optional params', async () => {
     const response = await client.payments.international.executeSepa({
       amount: 4090.998569865607,
@@ -31,7 +31,7 @@ describe('resource international', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeSwift: only required params', async () => {
     const responsePromise = client.payments.international.executeSwift({
       amount: 981.8703637183601,
@@ -48,7 +48,7 @@ describe('resource international', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeSwift: required and optional params', async () => {
     const response = await client.payments.international.executeSwift({
       amount: 981.8703637183601,
@@ -58,7 +58,7 @@ describe('resource international', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getStatus', async () => {
     const responsePromise = client.payments.international.getStatus('string');
     const rawResponse = await responsePromise.asResponse();

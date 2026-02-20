@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource sustainability', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveCarbonFootprint', async () => {
     const responsePromise = client.sustainability.retrieveCarbonFootprint();
     const rawResponse = await responsePromise.asResponse();
