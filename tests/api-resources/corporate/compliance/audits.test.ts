@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource audits', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('requestAudit: only required params', async () => {
     const responsePromise = client.corporate.compliance.audits.requestAudit({
       auditScope: 'string',
@@ -24,7 +24,7 @@ describe('resource audits', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('requestAudit: required and optional params', async () => {
     const response = await client.corporate.compliance.audits.requestAudit({
       auditScope: 'string',
@@ -33,7 +33,7 @@ describe('resource audits', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveReport', async () => {
     const responsePromise = client.corporate.compliance.audits.retrieveReport('string');
     const rawResponse = await responsePromise.asResponse();

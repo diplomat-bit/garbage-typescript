@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource decisions', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getRationale', async () => {
     const responsePromise = client.lending.decisions.getRationale('string');
     const rawResponse = await responsePromise.asResponse();

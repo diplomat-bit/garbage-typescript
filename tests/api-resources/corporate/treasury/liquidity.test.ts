@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource liquidity', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('configurePooling', async () => {
     const responsePromise = client.corporate.treasury.liquidity.configurePooling();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource liquidity', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('configurePooling: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -31,7 +31,7 @@ describe('resource liquidity', () => {
     ).rejects.toThrow(Garbage.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('optimize', async () => {
     const responsePromise = client.corporate.treasury.liquidity.optimize();
     const rawResponse = await responsePromise.asResponse();
@@ -43,7 +43,7 @@ describe('resource liquidity', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('optimize: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

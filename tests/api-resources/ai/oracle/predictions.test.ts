@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource predictions', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveInflation', async () => {
     const responsePromise = client.ai.oracle.predictions.retrieveInflation();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource predictions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveInflation: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -31,7 +31,7 @@ describe('resource predictions', () => {
     ).rejects.toThrow(Garbage.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveMarketCrashProbability', async () => {
     const responsePromise = client.ai.oracle.predictions.retrieveMarketCrashProbability();
     const rawResponse = await responsePromise.asResponse();

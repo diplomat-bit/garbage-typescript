@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource tools', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.ai.advisor.tools.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource tools', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('enable', async () => {
     const responsePromise = client.ai.advisor.tools.enable('string');
     const rawResponse = await responsePromise.asResponse();

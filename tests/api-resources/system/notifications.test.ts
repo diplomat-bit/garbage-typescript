@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource notifications', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listTemplates', async () => {
     const responsePromise = client.system.notifications.listTemplates();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource notifications', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('sendPush: only required params', async () => {
     const responsePromise = client.system.notifications.sendPush({
       body: 'string',
@@ -36,7 +36,7 @@ describe('resource notifications', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('sendPush: required and optional params', async () => {
     const response = await client.system.notifications.sendPush({
       body: 'string',

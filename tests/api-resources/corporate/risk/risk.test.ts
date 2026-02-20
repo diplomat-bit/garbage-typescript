@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource risk', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getRiskExposure', async () => {
     const responsePromise = client.corporate.risk.getRiskExposure();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource risk', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('runStressTest: only required params', async () => {
     const responsePromise = client.corporate.risk.runStressTest({ scenarioType: 'MARKET_CRASH' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource risk', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('runStressTest: required and optional params', async () => {
     const response = await client.corporate.risk.runStressTest({
       scenarioType: 'MARKET_CRASH',

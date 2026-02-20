@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource pitch', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.ai.incubator.pitch.create({
       businessPlan: 'string',
@@ -25,7 +25,7 @@ describe('resource pitch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.ai.incubator.pitch.create({
       businessPlan: 'string',
@@ -35,7 +35,7 @@ describe('resource pitch', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveDetails', async () => {
     const responsePromise = client.ai.incubator.pitch.retrieveDetails('string');
     const rawResponse = await responsePromise.asResponse();
@@ -47,7 +47,7 @@ describe('resource pitch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateFeedback: only required params', async () => {
     const responsePromise = client.ai.incubator.pitch.updateFeedback('string', { answers: [{}] });
     const rawResponse = await responsePromise.asResponse();
@@ -59,7 +59,7 @@ describe('resource pitch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateFeedback: required and optional params', async () => {
     const response = await client.ai.incubator.pitch.updateFeedback('string', { answers: [{}] });
   });
