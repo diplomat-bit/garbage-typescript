@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource insights', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getCashFlowPrediction', async () => {
     const responsePromise = client.transactions.insights.getCashFlowPrediction();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource insights', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getSpendingTrends', async () => {
     const responsePromise = client.transactions.insights.getSpendingTrends();
     const rawResponse = await responsePromise.asResponse();

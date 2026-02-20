@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource wallets', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.web3.wallets.create({ network: 'ETH' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource wallets', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.web3.wallets.create({ network: 'ETH' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.web3.wallets.list();
     const rawResponse = await responsePromise.asResponse();
@@ -37,7 +37,7 @@ describe('resource wallets', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getBalances', async () => {
     const responsePromise = client.web3.wallets.getBalances('string');
     const rawResponse = await responsePromise.asResponse();
@@ -49,7 +49,7 @@ describe('resource wallets', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('link: only required params', async () => {
     const responsePromise = client.web3.wallets.link({
       address: 'string',
@@ -65,7 +65,7 @@ describe('resource wallets', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('link: required and optional params', async () => {
     const response = await client.web3.wallets.link({
       address: 'string',

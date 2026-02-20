@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource network', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getStatus', async () => {
     const responsePromise = client.web3.network.getStatus();
     const rawResponse = await responsePromise.asResponse();

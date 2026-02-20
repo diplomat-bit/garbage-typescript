@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource models', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('fineTune: only required params', async () => {
     const responsePromise = client.ai.models.fineTune({
       base_model: 'string',
@@ -23,7 +23,7 @@ describe('resource models', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('fineTune: required and optional params', async () => {
     const response = await client.ai.models.fineTune({
       base_model: 'string',
@@ -32,7 +32,7 @@ describe('resource models', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveVersions', async () => {
     const responsePromise = client.ai.models.retrieveVersions();
     const rawResponse = await responsePromise.asResponse();

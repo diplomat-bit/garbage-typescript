@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource biometrics', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('enroll: only required params', async () => {
     const responsePromise = client.users.me.biometrics.enroll({
       biometricType: 'facial_recognition',
@@ -23,7 +23,7 @@ describe('resource biometrics', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('enroll: required and optional params', async () => {
     const response = await client.users.me.biometrics.enroll({
       biometricType: 'facial_recognition',
@@ -31,7 +31,7 @@ describe('resource biometrics', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('removeAll', async () => {
     const responsePromise = client.users.me.biometrics.removeAll();
     const rawResponse = await responsePromise.asResponse();
@@ -43,7 +43,7 @@ describe('resource biometrics', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveStatus', async () => {
     const responsePromise = client.users.me.biometrics.retrieveStatus();
     const rawResponse = await responsePromise.asResponse();
@@ -55,7 +55,7 @@ describe('resource biometrics', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('verify: only required params', async () => {
     const responsePromise = client.users.me.biometrics.verify({ biometricSignature: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -67,7 +67,7 @@ describe('resource biometrics', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('verify: required and optional params', async () => {
     const response = await client.users.me.biometrics.verify({ biometricSignature: 'string' });
   });

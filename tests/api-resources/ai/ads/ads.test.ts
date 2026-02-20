@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource ads', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.ai.ads.retrieve('string');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource ads', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.ai.ads.list();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource ads', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('optimize: only required params', async () => {
     const responsePromise = client.ai.ads.optimize({ campaignData: {} });
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource ads', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('optimize: required and optional params', async () => {
     const response = await client.ai.ads.optimize({ campaignData: {} });
   });

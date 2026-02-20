@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource applications', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('submit: only required params', async () => {
     const responsePromise = client.lending.applications.submit({
       amount: 3369.535449899852,
@@ -25,7 +25,7 @@ describe('resource applications', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('submit: required and optional params', async () => {
     const response = await client.lending.applications.submit({
       amount: 3369.535449899852,
@@ -42,7 +42,7 @@ describe('resource applications', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('trackStatus', async () => {
     const responsePromise = client.lending.applications.trackStatus('string');
     const rawResponse = await responsePromise.asResponse();

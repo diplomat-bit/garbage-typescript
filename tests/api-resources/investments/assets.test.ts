@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource assets', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('search: only required params', async () => {
     const responsePromise = client.investments.assets.search({ query: 'query' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource assets', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('search: required and optional params', async () => {
     const response = await client.investments.assets.search({ query: 'query', assetType: 'EQUITY' });
   });

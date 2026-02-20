@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource domestic', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeACH: only required params', async () => {
     const responsePromise = client.payments.domestic.executeACH({
       account: 'string',
@@ -24,7 +24,7 @@ describe('resource domestic', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeACH: required and optional params', async () => {
     const response = await client.payments.domestic.executeACH({
       account: 'string',
@@ -33,7 +33,7 @@ describe('resource domestic', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeRtp: only required params', async () => {
     const responsePromise = client.payments.domestic.executeRtp({
       amount: 856.3350923839752,
@@ -48,7 +48,7 @@ describe('resource domestic', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeRtp: required and optional params', async () => {
     const response = await client.payments.domestic.executeRtp({
       amount: 856.3350923839752,
@@ -56,7 +56,7 @@ describe('resource domestic', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeWire: only required params', async () => {
     const responsePromise = client.payments.domestic.executeWire({
       account: 'string',
@@ -72,7 +72,7 @@ describe('resource domestic', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeWire: required and optional params', async () => {
     const response = await client.payments.domestic.executeWire({
       account: 'string',

@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource nfts', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.web3.nfts.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource nfts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('mint: only required params', async () => {
     const responsePromise = client.web3.nfts.mint({ metadataUri: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource nfts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('mint: required and optional params', async () => {
     const response = await client.web3.nfts.mint({ metadataUri: 'string' });
   });

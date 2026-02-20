@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource contracts', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('deploy: only required params', async () => {
     const responsePromise = client.web3.contracts.deploy({
       abi: {},
@@ -23,7 +23,7 @@ describe('resource contracts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('deploy: required and optional params', async () => {
     const response = await client.web3.contracts.deploy({
       abi: {},

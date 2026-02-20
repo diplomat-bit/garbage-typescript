@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource impact', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listGlobalGreenProjects', async () => {
     const responsePromise = client.sustainability.impact.listGlobalGreenProjects();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource impact', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listGlobalGreenProjects: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -31,7 +31,7 @@ describe('resource impact', () => {
     ).rejects.toThrow(Garbage.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrievePortfolioImpact', async () => {
     const responsePromise = client.sustainability.impact.retrievePortfolioImpact();
     const rawResponse = await responsePromise.asResponse();

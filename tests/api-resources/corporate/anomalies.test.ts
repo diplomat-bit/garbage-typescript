@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource anomalies', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listDetected', async () => {
     const responsePromise = client.corporate.anomalies.listDetected();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource anomalies', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateStatus: only required params', async () => {
     const responsePromise = client.corporate.anomalies.updateStatus('string', { status: 'investigating' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource anomalies', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateStatus: required and optional params', async () => {
     const response = await client.corporate.anomalies.updateStatus('string', { status: 'investigating' });
   });

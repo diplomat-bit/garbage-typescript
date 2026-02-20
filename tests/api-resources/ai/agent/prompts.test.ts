@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource prompts', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.ai.agent.prompts.create({ systemPrompt: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource prompts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.ai.agent.prompts.create({ systemPrompt: 'string' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.ai.agent.prompts.list();
     const rawResponse = await responsePromise.asResponse();
