@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource offsets', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('purchaseCredits: only required params', async () => {
     const responsePromise = client.sustainability.offsets.purchaseCredits({
       projectId: 'string',
@@ -23,7 +23,7 @@ describe('resource offsets', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('purchaseCredits: required and optional params', async () => {
     const response = await client.sustainability.offsets.purchaseCredits({
       projectId: 'string',
@@ -32,7 +32,7 @@ describe('resource offsets', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retireCredits: only required params', async () => {
     const responsePromise = client.sustainability.offsets.retireCredits({ certificateId: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource offsets', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retireCredits: required and optional params', async () => {
     const response = await client.sustainability.offsets.retireCredits({ certificateId: 'string' });
   });

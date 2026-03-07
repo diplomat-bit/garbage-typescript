@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource compliance', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('screenMedia: only required params', async () => {
     const responsePromise = client.corporate.compliance.screenMedia({ query: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource compliance', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('screenMedia: required and optional params', async () => {
     const response = await client.corporate.compliance.screenMedia({ query: 'string', depth: 'shallow' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('screenPep: only required params', async () => {
     const responsePromise = client.corporate.compliance.screenPep({ fullName: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -37,12 +37,12 @@ describe('resource compliance', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('screenPep: required and optional params', async () => {
     const response = await client.corporate.compliance.screenPep({ fullName: 'string', dob: '1959-07-22' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('screenSanctions: only required params', async () => {
     const responsePromise = client.corporate.compliance.screenSanctions({ entities: [{}, {}] });
     const rawResponse = await responsePromise.asResponse();
@@ -54,7 +54,7 @@ describe('resource compliance', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('screenSanctions: required and optional params', async () => {
     const response = await client.corporate.compliance.screenSanctions({
       entities: [

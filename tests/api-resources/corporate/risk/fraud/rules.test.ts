@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource rules', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createCustom: only required params', async () => {
     const responsePromise = client.corporate.risk.fraud.rules.createCustom({
       logic: {},
@@ -23,7 +23,7 @@ describe('resource rules', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createCustom: required and optional params', async () => {
     const response = await client.corporate.risk.fraud.rules.createCustom({
       logic: {},
@@ -31,7 +31,7 @@ describe('resource rules', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listActive', async () => {
     const responsePromise = client.corporate.risk.fraud.rules.listActive();
     const rawResponse = await responsePromise.asResponse();
@@ -43,7 +43,7 @@ describe('resource rules', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateRule', async () => {
     const responsePromise = client.corporate.risk.fraud.rules.updateRule('string');
     const rawResponse = await responsePromise.asResponse();
@@ -55,7 +55,7 @@ describe('resource rules', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateRule: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource simulate', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.ai.oracle.simulate.create({ prompt: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource simulate', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.ai.oracle.simulate.create({
       prompt: 'string',
@@ -28,7 +28,7 @@ describe('resource simulate', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('advanced: only required params', async () => {
     const responsePromise = client.ai.oracle.simulate.advanced({
       prompt: 'string',
@@ -43,7 +43,7 @@ describe('resource simulate', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('advanced: required and optional params', async () => {
     const response = await client.ai.oracle.simulate.advanced({
       prompt: 'string',
@@ -54,7 +54,7 @@ describe('resource simulate', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('monteCarlo: only required params', async () => {
     const responsePromise = client.ai.oracle.simulate.monteCarlo({
       iterations: 2896,
@@ -69,7 +69,7 @@ describe('resource simulate', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('monteCarlo: required and optional params', async () => {
     const response = await client.ai.oracle.simulate.monteCarlo({
       iterations: 2896,

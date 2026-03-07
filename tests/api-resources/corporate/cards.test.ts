@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource cards', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getTransactions', async () => {
     const responsePromise = client.corporate.cards.getTransactions('string');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource cards', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('issueVirtualCard: only required params', async () => {
     const responsePromise = client.corporate.cards.issueVirtualCard({
       holderName: 'string',
@@ -36,7 +36,7 @@ describe('resource cards', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('issueVirtualCard: required and optional params', async () => {
     const response = await client.corporate.cards.issueVirtualCard({
       holderName: 'string',
@@ -46,7 +46,7 @@ describe('resource cards', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listAll', async () => {
     const responsePromise = client.corporate.cards.listAll();
     const rawResponse = await responsePromise.asResponse();
@@ -58,7 +58,7 @@ describe('resource cards', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listAll: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -66,7 +66,7 @@ describe('resource cards', () => {
     ).rejects.toThrow(Garbage.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('requestPhysicalCard: only required params', async () => {
     const responsePromise = client.corporate.cards.requestPhysicalCard({
       holderName: 'string',
@@ -85,7 +85,7 @@ describe('resource cards', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('requestPhysicalCard: required and optional params', async () => {
     const response = await client.corporate.cards.requestPhysicalCard({
       holderName: 'string',
@@ -99,7 +99,7 @@ describe('resource cards', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('toggleCardLock: only required params', async () => {
     const responsePromise = client.corporate.cards.toggleCardLock('string', { frozen: false });
     const rawResponse = await responsePromise.asResponse();
@@ -111,12 +111,12 @@ describe('resource cards', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('toggleCardLock: required and optional params', async () => {
     const response = await client.corporate.cards.toggleCardLock('string', { frozen: false });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateControls', async () => {
     const responsePromise = client.corporate.cards.updateControls('string');
     const rawResponse = await responsePromise.asResponse();
@@ -128,7 +128,7 @@ describe('resource cards', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateControls: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

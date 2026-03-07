@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource sweeping', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('configureRules: only required params', async () => {
     const responsePromise = client.corporate.treasury.sweeping.configureRules({
       sourceAccount: 'string',
@@ -24,7 +24,7 @@ describe('resource sweeping', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('configureRules: required and optional params', async () => {
     const response = await client.corporate.treasury.sweeping.configureRules({
       sourceAccount: 'string',
@@ -34,7 +34,7 @@ describe('resource sweeping', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeSweep: only required params', async () => {
     const responsePromise = client.corporate.treasury.sweeping.executeSweep({ ruleId: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -46,7 +46,7 @@ describe('resource sweeping', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeSweep: required and optional params', async () => {
     const response = await client.corporate.treasury.sweeping.executeSweep({ ruleId: 'string' });
   });
