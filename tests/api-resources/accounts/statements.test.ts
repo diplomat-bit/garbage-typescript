@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource statements', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.accounts.statements.list('string');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource statements', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrievePdf: only required params', async () => {
     const responsePromise = client.accounts.statements.retrievePdf('string', { accountId: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource statements', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrievePdf: required and optional params', async () => {
     const response = await client.accounts.statements.retrievePdf('string', { accountId: 'string' });
   });

@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource simulations', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.ai.oracle.simulations.retrieve('string');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource simulations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.ai.oracle.simulations.list();
     const rawResponse = await responsePromise.asResponse();

@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource recurring', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.transactions.recurring.create({
       amount: 2136.462018591201,
@@ -24,7 +24,7 @@ describe('resource recurring', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.transactions.recurring.create({
       amount: 2136.462018591201,
@@ -33,7 +33,7 @@ describe('resource recurring', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.transactions.recurring.list();
     const rawResponse = await responsePromise.asResponse();
@@ -45,7 +45,7 @@ describe('resource recurring', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('cancel', async () => {
     const responsePromise = client.transactions.recurring.cancel('string');
     const rawResponse = await responsePromise.asResponse();

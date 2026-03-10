@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource analysis', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('competitors: only required params', async () => {
     const responsePromise = client.ai.incubator.analysis.competitors({ industry: 'string', niche: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource analysis', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('competitors: required and optional params', async () => {
     const response = await client.ai.incubator.analysis.competitors({ industry: 'string', niche: 'string' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('swot: only required params', async () => {
     const responsePromise = client.ai.incubator.analysis.swot({ businessContext: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -37,7 +37,7 @@ describe('resource analysis', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('swot: required and optional params', async () => {
     const response = await client.ai.incubator.analysis.swot({ businessContext: 'string' });
   });

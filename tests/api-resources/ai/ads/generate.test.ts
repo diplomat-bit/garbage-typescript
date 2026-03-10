@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource generate', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('copy: only required params', async () => {
     const responsePromise = client.ai.ads.generate.copy({
       productDescription: 'string',
@@ -23,7 +23,7 @@ describe('resource generate', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('copy: required and optional params', async () => {
     const response = await client.ai.ads.generate.copy({
       productDescription: 'string',
@@ -31,7 +31,7 @@ describe('resource generate', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('video: only required params', async () => {
     const responsePromise = client.ai.ads.generate.video({
       lengthSeconds: 15,
@@ -47,7 +47,7 @@ describe('resource generate', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('video: required and optional params', async () => {
     const response = await client.ai.ads.generate.video({
       lengthSeconds: 15,

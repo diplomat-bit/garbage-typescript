@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource marketplace', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listProducts', async () => {
     const responsePromise = client.marketplace.listProducts();
     const rawResponse = await responsePromise.asResponse();

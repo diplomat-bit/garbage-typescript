@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource verification', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('compareBiometric: only required params', async () => {
     const responsePromise = client.system.verification.compareBiometric({
       sample_a: 'string',
@@ -23,7 +23,7 @@ describe('resource verification', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('compareBiometric: required and optional params', async () => {
     const response = await client.system.verification.compareBiometric({
       sample_a: 'string',
@@ -31,7 +31,7 @@ describe('resource verification', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('verifyDocument', async () => {
     const responsePromise = client.system.verification.verifyDocument();
     const rawResponse = await responsePromise.asResponse();

@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource transactions', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.transactions.retrieve('string');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.transactions.list();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -49,7 +49,7 @@ describe('resource transactions', () => {
     ).rejects.toThrow(Garbage.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('addNotes: only required params', async () => {
     const responsePromise = client.transactions.addNotes('string', { notes: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -61,12 +61,12 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('addNotes: required and optional params', async () => {
     const response = await client.transactions.addNotes('string', { notes: 'string' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('categorize: only required params', async () => {
     const responsePromise = client.transactions.categorize('string', { category: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -78,7 +78,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('categorize: required and optional params', async () => {
     const response = await client.transactions.categorize('string', {
       category: 'string',
@@ -86,7 +86,7 @@ describe('resource transactions', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('initiateDispute: only required params', async () => {
     const responsePromise = client.transactions.initiateDispute('string', { reason: 'service_not_rendered' });
     const rawResponse = await responsePromise.asResponse();
@@ -98,7 +98,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('initiateDispute: required and optional params', async () => {
     const response = await client.transactions.initiateDispute('string', {
       reason: 'service_not_rendered',
@@ -106,7 +106,7 @@ describe('resource transactions', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('split: only required params', async () => {
     const responsePromise = client.transactions.split('string', { splits: [{}, {}] });
     const rawResponse = await responsePromise.asResponse();
@@ -118,7 +118,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('split: required and optional params', async () => {
     const response = await client.transactions.split('string', {
       splits: [

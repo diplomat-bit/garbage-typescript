@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource accounts', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.accounts.delete('string');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('link: only required params', async () => {
     const responsePromise = client.accounts.link({ institutionId: 'string', publicToken: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,12 +32,12 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('link: required and optional params', async () => {
     const response = await client.accounts.link({ institutionId: 'string', publicToken: 'string' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('open: only required params', async () => {
     const responsePromise = client.accounts.open({
       currency: 'USD',
@@ -53,7 +53,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('open: required and optional params', async () => {
     const response = await client.accounts.open({
       currency: 'USD',
@@ -63,7 +63,7 @@ describe('resource accounts', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveBalanceHistory', async () => {
     const responsePromise = client.accounts.retrieveBalanceHistory('string');
     const rawResponse = await responsePromise.asResponse();
@@ -75,7 +75,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveBalanceHistory: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -87,7 +87,7 @@ describe('resource accounts', () => {
     ).rejects.toThrow(Garbage.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveDetails', async () => {
     const responsePromise = client.accounts.retrieveDetails('string');
     const rawResponse = await responsePromise.asResponse();
@@ -99,7 +99,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveMe', async () => {
     const responsePromise = client.accounts.retrieveMe();
     const rawResponse = await responsePromise.asResponse();

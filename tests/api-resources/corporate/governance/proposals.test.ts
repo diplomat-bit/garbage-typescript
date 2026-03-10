@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource proposals', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('castVote: only required params', async () => {
     const responsePromise = client.corporate.governance.proposals.castVote('string', { decision: 'REJECT' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource proposals', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('castVote: required and optional params', async () => {
     const response = await client.corporate.governance.proposals.castVote('string', {
       decision: 'REJECT',
@@ -29,7 +29,7 @@ describe('resource proposals', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createNew: only required params', async () => {
     const responsePromise = client.corporate.governance.proposals.createNew({
       actionType: 'LARGE_PAYMENT',
@@ -45,7 +45,7 @@ describe('resource proposals', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createNew: required and optional params', async () => {
     const response = await client.corporate.governance.proposals.createNew({
       actionType: 'LARGE_PAYMENT',
@@ -56,7 +56,7 @@ describe('resource proposals', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listActive', async () => {
     const responsePromise = client.corporate.governance.proposals.listActive();
     const rawResponse = await responsePromise.asResponse();

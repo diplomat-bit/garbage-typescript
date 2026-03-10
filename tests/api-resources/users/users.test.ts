@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource users', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('login: only required params', async () => {
     const responsePromise = client.users.login({ email: 'string', password: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('login: required and optional params', async () => {
     const response = await client.users.login({ email: 'string', password: 'string' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('logout', async () => {
     const responsePromise = client.users.logout();
     const rawResponse = await responsePromise.asResponse();
@@ -37,7 +37,7 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('register: only required params', async () => {
     const responsePromise = client.users.register({
       email: 'string',
@@ -53,7 +53,7 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('register: required and optional params', async () => {
     const response = await client.users.register({
       email: 'string',

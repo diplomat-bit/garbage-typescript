@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource fx', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('bookDeal: only required params', async () => {
     const responsePromise = client.payments.fx.bookDeal({
       amount: 9860.991425096323,
@@ -24,7 +24,7 @@ describe('resource fx', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('bookDeal: required and optional params', async () => {
     const response = await client.payments.fx.bookDeal({
       amount: 9860.991425096323,
@@ -33,7 +33,7 @@ describe('resource fx', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeConversion: only required params', async () => {
     const responsePromise = client.payments.fx.executeConversion({
       amount: 7305.266093092808,
@@ -49,7 +49,7 @@ describe('resource fx', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeConversion: required and optional params', async () => {
     const response = await client.payments.fx.executeConversion({
       amount: 7305.266093092808,
@@ -58,7 +58,7 @@ describe('resource fx', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getRates: only required params', async () => {
     const responsePromise = client.payments.fx.getRates({ pair: 'EURUSD' });
     const rawResponse = await responsePromise.asResponse();
@@ -70,7 +70,7 @@ describe('resource fx', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getRates: required and optional params', async () => {
     const response = await client.payments.fx.getRates({ pair: 'EURUSD' });
   });

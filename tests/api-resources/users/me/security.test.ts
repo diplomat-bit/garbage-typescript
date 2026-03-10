@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource security', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveLog', async () => {
     const responsePromise = client.users.me.security.retrieveLog();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource security', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveLog: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -28,7 +28,7 @@ describe('resource security', () => {
     ).rejects.toThrow(Garbage.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('rotateKeys', async () => {
     const responsePromise = client.users.me.security.rotateKeys();
     const rawResponse = await responsePromise.asResponse();
