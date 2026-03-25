@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource devices', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.users.me.devices.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource devices', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('deregister', async () => {
     const responsePromise = client.users.me.devices.deregister('string');
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource devices', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('register: only required params', async () => {
     const responsePromise = client.users.me.devices.register({ deviceId: 'string', type: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource devices', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('register: required and optional params', async () => {
     const response = await client.users.me.devices.register({
       deviceId: 'string',

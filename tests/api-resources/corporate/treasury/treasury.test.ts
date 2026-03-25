@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource treasury', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeBulkPayouts: only required params', async () => {
     const responsePromise = client.corporate.treasury.executeBulkPayouts({ payouts: [{}, {}] });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource treasury', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('executeBulkPayouts: required and optional params', async () => {
     const response = await client.corporate.treasury.executeBulkPayouts({
       payouts: [
@@ -30,7 +30,7 @@ describe('resource treasury', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getLiquidityPositions', async () => {
     const responsePromise = client.corporate.treasury.getLiquidityPositions();
     const rawResponse = await responsePromise.asResponse();

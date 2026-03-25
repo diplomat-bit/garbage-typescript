@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource agent', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveCapabilities', async () => {
     const responsePromise = client.ai.agent.retrieveCapabilities();
     const rawResponse = await responsePromise.asResponse();

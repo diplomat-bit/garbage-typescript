@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource fraud', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('analyzeTransaction: only required params', async () => {
     const responsePromise = client.corporate.risk.fraud.analyzeTransaction({ transactionId: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource fraud', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('analyzeTransaction: required and optional params', async () => {
     const response = await client.corporate.risk.fraud.analyzeTransaction({ transactionId: 'string' });
   });

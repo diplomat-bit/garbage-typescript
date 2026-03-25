@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource webhooks', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.system.webhooks.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource webhooks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.system.webhooks.delete('string');
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource webhooks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('register: only required params', async () => {
     const responsePromise = client.system.webhooks.register({
       events: ['transaction.created', 'login.alert'],
@@ -47,7 +47,7 @@ describe('resource webhooks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('register: required and optional params', async () => {
     const response = await client.system.webhooks.register({
       events: ['transaction.created', 'login.alert'],

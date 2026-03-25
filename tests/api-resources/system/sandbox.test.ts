@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource sandbox', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('reset', async () => {
     const responsePromise = client.system.sandbox.reset();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource sandbox', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('simulateError: only required params', async () => {
     const responsePromise = client.system.sandbox.simulateError({ errorCode: 500 });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource sandbox', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('simulateError: required and optional params', async () => {
     const response = await client.system.sandbox.simulateError({ errorCode: 500 });
   });

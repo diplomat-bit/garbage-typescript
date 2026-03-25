@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource transactions', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('bridge: only required params', async () => {
     const responsePromise = client.web3.transactions.bridge({
       token: 'string',
@@ -25,7 +25,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('bridge: required and optional params', async () => {
     const response = await client.web3.transactions.bridge({
       token: 'string',
@@ -35,7 +35,7 @@ describe('resource transactions', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('initiate: only required params', async () => {
     const responsePromise = client.web3.transactions.initiate({
       amount: 8684.340121544215,
@@ -51,7 +51,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('initiate: required and optional params', async () => {
     const response = await client.web3.transactions.initiate({
       amount: 8684.340121544215,
@@ -60,7 +60,7 @@ describe('resource transactions', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('send: only required params', async () => {
     const responsePromise = client.web3.transactions.send({
       token: 'string',
@@ -76,7 +76,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('send: required and optional params', async () => {
     const response = await client.web3.transactions.send({
       token: 'string',
@@ -85,7 +85,7 @@ describe('resource transactions', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('swap: only required params', async () => {
     const responsePromise = client.web3.transactions.swap({
       amount: 'string',
@@ -101,7 +101,7 @@ describe('resource transactions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('swap: required and optional params', async () => {
     const response = await client.web3.transactions.swap({
       amount: 'string',

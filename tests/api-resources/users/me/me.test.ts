@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource me', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.users.me.retrieve();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource me', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.users.me.update();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource me', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.users.me.delete();
     const rawResponse = await responsePromise.asResponse();

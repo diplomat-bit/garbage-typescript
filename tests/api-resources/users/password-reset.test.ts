@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource passwordReset', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('confirm: only required params', async () => {
     const responsePromise = client.users.passwordReset.confirm({
       identifier: 'string',
@@ -24,7 +24,7 @@ describe('resource passwordReset', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('confirm: required and optional params', async () => {
     const response = await client.users.passwordReset.confirm({
       identifier: 'string',
@@ -33,7 +33,7 @@ describe('resource passwordReset', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('initiate: only required params', async () => {
     const responsePromise = client.users.passwordReset.initiate({ identifier: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -45,7 +45,7 @@ describe('resource passwordReset', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('initiate: required and optional params', async () => {
     const response = await client.users.passwordReset.initiate({ identifier: 'string' });
   });

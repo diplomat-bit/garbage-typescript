@@ -8,7 +8,7 @@ const client = new Garbage({
 });
 
 describe('resource incubator', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrievePitches', async () => {
     const responsePromise = client.ai.incubator.retrievePitches();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource incubator', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('validate: only required params', async () => {
     const responsePromise = client.ai.incubator.validate({ concept: 'string' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource incubator', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('validate: required and optional params', async () => {
     const response = await client.ai.incubator.validate({ concept: 'string' });
   });
